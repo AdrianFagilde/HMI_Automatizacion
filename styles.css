@@ -1,0 +1,43 @@
+#grafcetDiagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000033; /* dark blue */
+    color: #FFFFFF; /* white */
+    font-family: Arial, sans-serif;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.step, .transition {
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.step {
+    border: 2px solid #FFFFFF; /* white */
+    background-color: #ADD8E6; /* light blue */
+}
+
+.active {
+    background-color: #FFA500; /* orange */
+}
+
+.transition {
+    height: 20px;
+    border-left: 2px solid #FFFFFF; /* white */
+    position: relative;
+}
+
+.transition::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #FFFFFF transparent transparent transparent; /* white */
+}
